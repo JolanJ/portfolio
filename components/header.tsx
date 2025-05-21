@@ -34,7 +34,7 @@ export default function Header() {
         <div className="hidden items-center md:flex">
           <nav className="mr-6">
             <ul className="flex space-x-8">
-              {["À propos", "Expérience", "Compétences", "Formation", "Contact"].map((item, index) => (
+              {["À propos", "Expérience", "Compétences", "Projets", "Formation", "Contact"].map((item, index) => (
                 <li key={index}>
                   <Button
                     variant="ghost"
@@ -95,7 +95,7 @@ export default function Header() {
         <div className="absolute left-0 right-0 top-16 z-50 bg-white shadow-lg md:hidden">
           <nav className="container mx-auto py-4">
             <ul className="flex flex-col space-y-2">
-              {["À propos", "Expérience", "Compétences", "Formation", "Contact"].map((item, index) => (
+              {["À propos", "Expérience", "Compétences", "Projets", "Formation", "Contact"].map((item, index) => (
                 <li key={index}>
                   <Button
                     variant="ghost"
