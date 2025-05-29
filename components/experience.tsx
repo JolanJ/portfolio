@@ -8,7 +8,7 @@ export default function Experience() {
     {
       title: "Président & CTO",
       company: "Luxévo Technologies",
-      period: "2025 - Présent",
+      period: "Janv 2025 - Présent",
       achievements: [
         "Croissance accélérée : Généré 60 000 $ de contrats en un mois dans des secteurs ciblés (éducation, construction, santé mentale) grâce à des solutions numériques personnalisées.",
         "Stratégie & investissement : Conclu 2 partenariats en equity (20 %) avec des startups totalisant plus de 2 000 utilisateurs actifs, en échange d'une implication technique et stratégique.",
@@ -19,7 +19,7 @@ export default function Experience() {
     {
       title: "Président",
       company: "J.J.N Esthétique INC.",
-      period: "Feb 2020 - Présent",
+      period: "Feb 2020 - Janv 2025",
       achievements: [
         "Déploiement d'une stratégie axée sur la croissance interne, ayant permis d'augmenter le chiffre d'affaires mensuel récurrent (MRR) de +45 % en 12 mois.",
         "Création de partenariats B2B avec des concessionnaires, garages et entreprises de transport, représentant plus de 40 % du MRR actuel.",
@@ -30,7 +30,7 @@ export default function Experience() {
     {
       title: "Développeur Web",
       company: "Nucleus Stratégie",
-      period: "Jan 2025 - Juin 2025",
+      period: "Jan 2024 - Juin 2024",
       achievements: [
         "Conception du site web d'Affilia Legal, cabinet montréalais membre du réseau mondial World Link for Law, présent dans 47 pays avec plus de 80 cabinets partenaires.",
         "Effectué des suivis de courriels avec les clients et participé à l'assurance qualité.",
