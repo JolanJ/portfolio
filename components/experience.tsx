@@ -40,21 +40,21 @@ export default function Experience() {
   ]
 
   return (
-    <section id="expérience" className="relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white py-20">
-      <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-emerald-100 opacity-30 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-purple-100 opacity-30 blur-3xl"></div>
+    <section id="expérience" className="relative overflow-hidden bg-gradient-to-b from-blue-50/20 to-white py-20">
+      <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-blue-100/40 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-indigo-50/40 blur-3xl"></div>
 
       <div className="container relative mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-bold text-slate-700 md:text-4xl">
           <span className="relative inline-block">
             Expérience Professionnelle
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-emerald-400 to-purple-400"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-slate-200"></span>
           </span>
         </h2>
 
         <div className="relative mx-auto max-w-5xl">
           {/* Timeline line */}
-          <div className="absolute left-[15px] top-0 h-full w-1 bg-gradient-to-b from-emerald-300 to-purple-400 md:left-1/2 md:-ml-0.5"></div>
+          <div className="absolute left-[15px] top-0 h-full w-1 bg-slate-100 md:left-1/2 md:-ml-0.5"></div>
 
           {experiences.map((exp, index) => (
             <TimelineItem key={index} experience={exp} index={index} />
@@ -76,7 +76,7 @@ function TimelineItem({ experience, index }) {
   return (
     <div ref={ref} className={`relative mb-12 flex ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}>
       {/* Timeline dot */}
-      <div className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-emerald-500 shadow-md md:left-1/2 md:-ml-4">
+      <div className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-400 shadow-md md:left-1/2 md:-ml-4">
         <CheckCircle className="h-4 w-4 text-white" />
       </div>
 
@@ -91,15 +91,15 @@ function TimelineItem({ experience, index }) {
             inView ? "animate-fadeIn" : ""
           }`}
         >
-          <CardHeader className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white">
+          <CardHeader className="bg-slate-500 text-white">
             <div className="flex items-center justify-between">
               <CardTitle className="text-xl font-bold md:text-2xl">{experience.title}</CardTitle>
-              <div className="flex items-center text-emerald-100">
+              <div className="flex items-center text-slate-100">
                 <Calendar className="mr-2 h-4 w-4" />
                 <span className="text-sm">{experience.period}</span>
               </div>
             </div>
-            <CardDescription className="flex items-center text-emerald-100">
+            <CardDescription className="flex items-center text-slate-100">
               <Building className="mr-2 h-4 w-4" />
               {experience.company}
             </CardDescription>
@@ -113,8 +113,8 @@ function TimelineItem({ experience, index }) {
                     inView ? `animate-slideInRight delay-${i * 100}` : "opacity-0"
                   }`}
                 >
-                  <ArrowUpRight className="mr-2 mt-1 h-4 w-4 flex-shrink-0 text-emerald-500" />
-                  <span className="text-gray-700">{achievement}</span>
+                  <ArrowUpRight className="mr-2 mt-1 h-4 w-4 flex-shrink-0 text-slate-400" />
+                  <span className="text-slate-600">{achievement}</span>
                 </li>
               ))}
             </ul>

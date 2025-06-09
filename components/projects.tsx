@@ -121,15 +121,15 @@ export default function Projects() {
   }, [exitX, controls, currentIndex])
 
   return (
-    <section id="projets" className="relative overflow-hidden py-20 bg-gradient-to-b from-white to-emerald-50">
-      <div className="absolute left-1/3 top-0 h-64 w-64 rounded-full bg-purple-100 opacity-30 blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/3 h-64 w-64 rounded-full bg-emerald-100 opacity-30 blur-3xl"></div>
+    <section id="projets" className="relative overflow-hidden py-20 bg-gradient-to-b from-white to-blue-50/30">
+      <div className="absolute left-1/3 top-0 h-64 w-64 rounded-full bg-blue-100/30 opacity-40 blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/3 h-64 w-64 rounded-full bg-indigo-50/30 opacity-40 blur-3xl"></div>
 
       <div className="container relative mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-bold text-slate-700 md:text-4xl">
           <span className="relative inline-block">
             Projets Réalisés
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-emerald-400 to-purple-400"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-slate-200"></span>
           </span>
         </h2>
 
@@ -185,7 +185,7 @@ export default function Projects() {
                 onClick={prevProject}
                 variant="outline"
                 size="icon"
-                className="rounded-full border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
+                className="rounded-full border-slate-100 hover:bg-blue-50/50 hover:text-slate-500"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -194,7 +194,7 @@ export default function Projects() {
                   <span
                     key={index}
                     className={`block h-2 w-2 rounded-full transition-colors ${
-                      index === currentIndex ? "bg-emerald-500" : "bg-gray-300"
+                      index === currentIndex ? "bg-slate-400" : "bg-slate-100"
                     }`}
                   ></span>
                 ))}
@@ -203,13 +203,13 @@ export default function Projects() {
                 onClick={nextProject}
                 variant="outline"
                 size="icon"
-                className="rounded-full border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
+                className="rounded-full border-slate-100 hover:bg-blue-50/50 hover:text-slate-500"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
             </div>
 
-            <div className="mt-4 text-center text-sm text-gray-500">
+            <div className="mt-4 text-center text-sm text-slate-400">
               <p>Glissez pour voir plus de projets ou utilisez les fleches</p>
             </div>
           </div>

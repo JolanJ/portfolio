@@ -24,10 +24,10 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="text-xl font-bold">
-          <span className="text-gray-900">Jolan Jarry-Nohair</span>
+          <span className="text-slate-700">Jolan Jarry-Nohair</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ export default function Header() {
                   <Button
                     variant="ghost"
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-gray-600 hover:text-gray-900"
+                    className="text-slate-500 hover:text-slate-700"
                   >
                     {item}
                   </Button>
@@ -51,10 +51,10 @@ export default function Header() {
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/jolan-jarry-nohair"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 transition-colors hover:text-emerald-600"
+              className="text-slate-500 transition-colors hover:text-slate-600"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
@@ -63,14 +63,14 @@ export default function Header() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 transition-colors hover:text-purple-600"
+              className="text-slate-500 transition-colors hover:text-slate-600"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
               href="mailto:jolan.jarry@hotmail.com"
-              className="text-gray-600 transition-colors hover:text-emerald-600"
+              className="text-slate-500 transition-colors hover:text-slate-600"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -100,7 +100,7 @@ export default function Header() {
                   <Button
                     variant="ghost"
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="w-full justify-start text-gray-600 hover:text-gray-900"
+                    className="w-full justify-start text-slate-500 hover:text-slate-700"
                   >
                     {item}
                   </Button>
@@ -109,12 +109,12 @@ export default function Header() {
             </ul>
 
             {/* Social Media Icons for Mobile */}
-            <div className="mt-4 flex justify-center space-x-6 pt-4 border-t border-gray-100">
+            <div className="mt-4 flex justify-center space-x-6 pt-4 border-t border-slate-50">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/jolan-jarry-nohair"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 transition-colors hover:text-emerald-600"
+                className="text-slate-500 transition-colors hover:text-slate-600"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -123,14 +123,14 @@ export default function Header() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 transition-colors hover:text-purple-600"
+                className="text-slate-500 transition-colors hover:text-slate-600"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="mailto:jolan.jarry@hotmail.com"
-                className="text-gray-600 transition-colors hover:text-emerald-600"
+                className="text-slate-500 transition-colors hover:text-slate-600"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />

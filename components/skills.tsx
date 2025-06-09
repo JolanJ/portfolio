@@ -25,7 +25,7 @@ export default function Skills() {
   const technicalSkills = [
     { name: "Suite Office", level: 90 },
     { name: "Base de donnée", level: 85 },
-    { name: "Excel", level: 75 }, // Modifié de 95 à 75
+    { name: "Excel", level: 75 },
     { name: "CRM", level: 80 },
     { name: "CMS", level: 85 },
   ]
@@ -56,14 +56,14 @@ export default function Skills() {
 
   return (
     <section id="compétences" className="relative overflow-hidden py-20">
-      <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-purple-100 opacity-30 blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-emerald-100 opacity-30 blur-3xl"></div>
+      <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-blue-100/30 blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-indigo-50/30 blur-3xl"></div>
 
       <div className="container relative mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-bold text-slate-700 md:text-4xl">
           <span className="relative inline-block">
             Compétences
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-purple-400 to-emerald-400"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-slate-200"></span>
           </span>
         </h2>
 
@@ -73,7 +73,7 @@ export default function Skills() {
               inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
-            <CardHeader className="bg-gradient-to-r from-purple-600 to-purple-500 text-white">
+            <CardHeader className="bg-slate-400 text-white">
               <CardTitle className="text-xl font-bold md:text-2xl">Compétences Techniques</CardTitle>
             </CardHeader>
             <CardContent>
@@ -86,12 +86,12 @@ export default function Skills() {
                     }`}
                   >
                     <div className="mb-2">
-                      <span className="font-medium text-gray-700">{skill.name}</span>
+                      <span className="font-medium text-slate-600">{skill.name}</span>
                     </div>
                     <Progress
                       value={progressValues[skill.name]}
-                      className="h-2 bg-gray-200 transition-all duration-1000 ease-out"
-                      indicatorClassName="bg-gradient-to-r from-purple-500 to-emerald-500"
+                      className="h-2 bg-slate-50 transition-all duration-1000 ease-out"
+                      indicatorClassName="bg-slate-400"
                     />
                   </div>
                 ))}
@@ -104,7 +104,7 @@ export default function Skills() {
               inView ? "translate-y-0 opacity-100 delay-300" : "translate-y-10 opacity-0"
             }`}
           >
-            <CardHeader className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white">
+            <CardHeader className="bg-slate-500 text-white">
               <CardTitle className="text-xl font-bold md:text-2xl">Compétences Professionnelles</CardTitle>
             </CardHeader>
             <CardContent>
@@ -114,7 +114,7 @@ export default function Skills() {
                     key={index}
                     className={`text-base transition-all duration-500 ${
                       inView
-                        ? `animate-fadeIn delay-${index * 100} bg-gradient-to-r from-purple-100 to-emerald-100 text-gray-800 hover:from-purple-200 hover:to-emerald-200`
+                        ? `animate-fadeIn delay-${index * 100} bg-blue-50/50 text-slate-600 hover:bg-blue-50`
                         : "opacity-0"
                     }`}
                   >

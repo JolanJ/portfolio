@@ -26,7 +26,7 @@ export default function Home() {
 
         <div className="container mx-auto flex justify-center py-8">
           <div className={`animate-bounce transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-            <ChevronDown className="h-8 w-8 text-emerald-400" />
+            <ChevronDown className="h-8 w-8 text-slate-300" />
           </div>
         </div>
 

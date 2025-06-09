@@ -47,14 +47,14 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden py-20">
-      <div className="absolute left-0 bottom-0 h-64 w-64 rounded-full bg-emerald-100 opacity-30 blur-3xl"></div>
-      <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-purple-100 opacity-30 blur-3xl"></div>
+      <div className="absolute left-0 bottom-0 h-64 w-64 rounded-full bg-blue-100/30 blur-3xl"></div>
+      <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-indigo-50/30 blur-3xl"></div>
 
       <div className="container relative mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-bold text-slate-700 md:text-4xl">
           <span className="relative inline-block">
             Me Contacter
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-purple-400 to-emerald-400"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-slate-200"></span>
           </span>
         </h2>
 
@@ -64,7 +64,7 @@ export default function Contact() {
               inView ? "translate-x-0 opacity-100" : "translate-x-[-40px] opacity-0"
             }`}
           >
-            <h3 className="mb-6 text-xl font-semibold text-gray-900 md:text-2xl">Informations de Contact</h3>
+            <h3 className="mb-6 text-xl font-semibold text-slate-700 md:text-2xl">Informations de Contact</h3>
 
             <div className="space-y-6">
               <Card
@@ -73,14 +73,14 @@ export default function Contact() {
                 }`}
               >
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-400">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email</p>
+                    <p className="text-sm text-slate-400">Email</p>
                     <a
                       href="mailto:jolan.jarry@hotmail.com"
-                      className="font-medium text-gray-900 hover:text-emerald-600 hover:underline"
+                      className="font-medium text-slate-700 hover:text-slate-500 hover:underline"
                     >
                       jolan.jarry@hotmail.com
                     </a>
@@ -94,14 +94,14 @@ export default function Contact() {
                 }`}
               >
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-purple-400">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-500">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Téléphone</p>
+                    <p className="text-sm text-slate-400">Téléphone</p>
                     <a
                       href="tel:4385186319"
-                      className="font-medium text-gray-900 hover:text-purple-600 hover:underline"
+                      className="font-medium text-slate-700 hover:text-slate-500 hover:underline"
                     >
                       438 518 6319
                     </a>
@@ -115,12 +115,12 @@ export default function Contact() {
                 }`}
               >
                 <CardContent className="flex items-center gap-4 p-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 to-purple-500">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Localisation</p>
-                    <p className="font-medium text-gray-900">Brownsburg-Chatham, QC</p>
+                    <p className="text-sm text-slate-400">Localisation</p>
+                    <p className="font-medium text-slate-700">Brownsburg-Chatham, QC</p>
                   </div>
                 </CardContent>
               </Card>
@@ -132,7 +132,7 @@ export default function Contact() {
               inView ? "translate-x-0 opacity-100 delay-300" : "translate-x-40 opacity-0"
             }`}
           >
-            <h3 className="mb-6 text-xl font-semibold text-gray-900 md:text-2xl">Envoyez-moi un message</h3>
+            <h3 className="mb-6 text-xl font-semibold text-slate-700 md:text-2xl">Envoyez-moi un message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -143,7 +143,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full border-emerald-200 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="w-full border-slate-100 focus:border-slate-300 focus:ring-slate-300"
                 />
               </div>
 
@@ -155,7 +155,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full border-emerald-200 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="w-full border-slate-100 focus:border-slate-300 focus:ring-slate-300"
                 />
               </div>
 
@@ -166,13 +166,13 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="min-h-[150px] w-full border-emerald-200 focus:border-emerald-500 focus:ring-emerald-500"
+                  className="min-h-[150px] w-full border-slate-100 focus:border-slate-300 focus:ring-slate-300"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-600 to-purple-600 transition-all duration-300 hover:from-emerald-700 hover:to-purple-700"
+                className="w-full bg-slate-500 text-white transition-all duration-300 hover:bg-slate-400"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -204,7 +204,7 @@ export default function Contact() {
               </Button>
 
               {isSubmitted && (
-                <div className="mt-4 rounded-md bg-emerald-50 p-4 text-emerald-800">
+                <div className="mt-4 rounded-md bg-blue-50/50 p-4 text-slate-600">
                   Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.
                 </div>
               )}
