@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 export default function Experience() {
   const experiences = [
     {
-      title: "Président & CTO",
+      title: "Directeur des Services Web",
       company: "Luxévo Technologies",
       period: "Janv 2025 - Présent",
       achievements: [
