@@ -39,7 +39,7 @@ export default function Header() {
                   <Button
                     variant="ghost"
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-slate-500 hover:text-slate-700"
+                    className="text-slate-500 hover:bg-blue-50/50 hover:text-slate-700"
                   >
                     {item}
                   </Button>
@@ -54,7 +54,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/jolan-jarry-nohair"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 transition-colors hover:text-slate-600"
+              className="text-slate-500 transition-colors hover:text-blue-500"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
@@ -63,14 +63,14 @@ export default function Header() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 transition-colors hover:text-slate-600"
+              className="text-slate-500 transition-colors hover:text-slate-700"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
               href="mailto:jolan.jarry@hotmail.com"
-              className="text-slate-500 transition-colors hover:text-slate-600"
+              className="text-slate-500 transition-colors hover:text-slate-700"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -100,7 +100,7 @@ export default function Header() {
                   <Button
                     variant="ghost"
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="w-full justify-start text-slate-500 hover:text-slate-700"
+                    className="w-full justify-start text-slate-500 hover:bg-blue-50/50 hover:text-slate-700"
                   >
                     {item}
                   </Button>
@@ -114,7 +114,7 @@ export default function Header() {
                 href="https://www.linkedin.com/in/jolan-jarry-nohair"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 transition-colors hover:text-slate-600"
+                className="text-slate-500 transition-colors hover:text-blue-500"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -123,14 +123,14 @@ export default function Header() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 transition-colors hover:text-slate-600"
+                className="text-slate-500 transition-colors hover:text-slate-700"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="mailto:jolan.jarry@hotmail.com"
-                className="text-slate-500 transition-colors hover:text-slate-600"
+                className="text-slate-500 transition-colors hover:text-slate-700"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
