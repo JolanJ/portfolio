@@ -22,27 +22,60 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    setError("") // Clear error when user starts typing
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError("")
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      setFormData({ name: "", email: "", message: "" })
+    try {
+      // Créer le corps de l'email
+      const emailBody = `
+Nouveau message de votre portfolio:
 
-      // Reset success message after 5 seconds
+Nom: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+
+---
+Envoyé depuis votre portfolio web
+      `.trim()
+
+      // Créer le lien mailto
+      const mailtoLink = `mailto:jolan.jarry@hotmail.com?subject=Message depuis votre portfolio - ${formData.name}&body=${encodeURIComponent(emailBody)}`
+
+      // Ouvrir le client email
+      window.location.href = mailtoLink
+
+      // Simuler un délai pour l'UX
       setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
-    }, 1500)
+        setIsSubmitting(false)
+        setIsSubmitted(true)
+        setFormData({ name: "", email: "", message: "" })
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false)
+        }, 5000)
+      }, 1000)
+    } catch (err) {
+      setIsSubmitting(false)
+      setError("Une erreur s'est produite. Veuillez réessayer ou m'envoyer un email directement.")
+    }
+  }
+
+  const handleDirectEmail = () => {
+    const mailtoLink = `mailto:jolan.jarry@hotmail.com?subject=Contact depuis votre portfolio`
+    window.location.href = mailtoLink
   }
 
   return (
@@ -170,45 +203,63 @@ export default function Contact() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-slate-500 text-white transition-all duration-300 hover:bg-slate-400"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center gap-2">
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24">
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                        fill="none"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      />
-                    </svg>
-                    Envoi en cours...
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-2">
-                    <Send className="h-4 w-4" />
-                    Envoyer
-                  </span>
-                )}
-              </Button>
+              <div className="flex gap-2">
+                <Button
+                  type="submit"
+                  className="flex-1 bg-slate-500 text-white transition-all duration-300 hover:bg-slate-400"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24">
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      Ouverture...
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      <Send className="h-4 w-4" />
+                      Envoyer via Email
+                    </span>
+                  )}
+                </Button>
+
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={handleDirectEmail}
+                  className="border-slate-200 text-slate-600 hover:bg-slate-50"
+                >
+                  <Mail className="h-4 w-4" />
+                </Button>
+              </div>
+
+              {error && <div className="mt-4 rounded-md bg-red-50 p-4 text-red-600">{error}</div>}
 
               {isSubmitted && (
                 <div className="mt-4 rounded-md bg-blue-50/50 p-4 text-slate-600">
-                  Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.
+                  Votre client email s'est ouvert avec le message pré-rempli. Si cela n'a pas fonctionné, vous pouvez
+                  m'écrire directement à jolan.jarry@hotmail.com
                 </div>
               )}
             </form>
+
+            <div className="mt-4 text-sm text-slate-400">
+              <p>💡 Le formulaire ouvrira votre client email avec le message pré-rempli</p>
+            </div>
           </div>
         </div>
       </div>
