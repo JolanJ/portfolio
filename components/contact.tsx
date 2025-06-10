@@ -251,15 +251,10 @@ Envoyé depuis votre portfolio web
 
               {isSubmitted && (
                 <div className="mt-4 rounded-md bg-blue-50/50 p-4 text-slate-600">
-                  Votre client email s'est ouvert avec le message pré-rempli. Si cela n'a pas fonctionné, vous pouvez
-                  m'écrire directement à jolan.jarry@hotmail.com
+                  Votre client email s'est ouvert avec le message pré-rempli. Vous pouvez maintenant l'envoyer !
                 </div>
               )}
             </form>
-
-            <div className="mt-4 text-sm text-slate-400">
-              <p>💡 Le formulaire ouvrira votre client email avec le message pré-rempli</p>
-            </div>
           </div>
         </div>
       </div>
